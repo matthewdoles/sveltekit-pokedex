@@ -1,12 +1,13 @@
 <script>
+	import { pokemon } from '../stores/pokestore';
 </script>
 
 <svelte:head>
-  <title>Pokedex</title>
+	<title>Pokedex</title>
 </svelte:head>
 
-<h1>Svelte Kit Pokedex</h1>
+<h1 class="text-4xl text-center my-8 uppercase">Svelte Kit Pokedex</h1>
 
-<style>
-
-</style>
+{#each $pokemon as poke}
+	<p>{poke.name}</p>
+{/each}
