@@ -12,7 +12,7 @@
 	<a class="mx-4 text-lg dark:text-white" href="/">Home</a>
 	<a class="mx-4 text-lg dark:text-white" href="/about">About</a>
 	<div
-		class="mx-4 text-lg dark:text-yellow-300 w-7 h-7"
+		class="mx-4 text-lg dark:text-yellow-300 w-7 h-7 cursor-pointer"
 		on:click={() => {
 			document.documentElement.classList.toggle('dark');
 			darkMode = !darkMode;

@@ -1,38 +1,22 @@
-# create-svelte
+# sveltekit-pokedex
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
+### About
 
-## Creating a project
+This is a SvelteKit application styled with Tailwind CSS that uses the Pokemon API to build a
+Pokedex.
 
-If you're seeing this, you've probably already done this step. Congrats!
+This application is the follow along code for James Q Quick's tutorial video [SvelteKit Crash Course - SSR, API Routes, Stores, Tailwind CSS, and More!](https://www.youtube.com/watch?v=UU7MgYIbtAk&t=125s)
 
-```bash
-# create a new project in the current directory
-npm init svelte@next
+Having finished a Svelte tutorial which covered Sapper, I began investigating projects, templates, setups, etc. and soon found out that SvelteKit had come into popularity as an official replacement for Sapper. Thus, I did this tutorial to familarize myself with SvelteKit.
 
-# create a new project in my-app
-npm init svelte@next my-app
-```
+### Demo
 
-> Note: the `@next` is temporary
+Application: https://sveltekit-pokedex-ashen.vercel.app/
 
-## Developing
+API: https://sveltekit-pokedex-ashen.vercel.app/api/pokemon
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+### Enhancements
 
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
-
-```bash
-npm run build
-```
-
-> You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
+- Light and dark mode toggling
+- Environment variables to dynamically point to the Development API and the Production AP
+- Deployment to Vercel.
