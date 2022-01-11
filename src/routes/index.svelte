@@ -1,10 +1,13 @@
 <script context="module">
+	import { dev } from '$app/env';
 	export async function load() {
-		const url = 'https://pokeapi.co/api/v2/pokemon?limit=150';
+		const url = dev
+			? import.meta.env.VITE_DEV_API + '/api/pokemon'
+			: 'https://pokeapi.co/api/v2/pokemon?limit=150';
 		const res = await fetch(url);
 		const data = await res.json();
 
-		const loadedPokemon = data.results.map((data, index) => {
+		const loadedPokemon = data.map((data, index) => {
 			return {
 				name: data.name,
 				id: index + 1,
