@@ -2,10 +2,8 @@
 	import { dev } from '$app/env';
 	export async function load({ params }) {
 		const id = params.id;
-		const url = dev
-			? import.meta.env.VITE_DEV_API + `/api/pokemon/${id}`
-			: 'https://pokeapi.co/api/v2/pokemon?limit=150';
-		const res = await fetch(url);
+		const baseUrl = dev ? import.meta.env.VITE_DEV_API : import.meta.env.VITE_PROD_API;
+		const res = await fetch(baseUrl + `/api/pokemon/${id}`);
 		const pokemon = await res.json();
 		return { props: { pokemon } };
 	}
